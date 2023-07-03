@@ -9,7 +9,7 @@ const productRoutes=require('./api/routes/products')
 const ordersRoutes=require('./api/routes/orders')
 
 mongoose.connect(
-    'mongodb+srv://node-shop:node-shop@node-rest-shop.ckvlhxl.mongodb.net/?retryWrites=true&w=majority',
+     'mongodb+srv://node-shop:node-shop@node-rest-shop.ckvlhxl.mongodb.net/?retryWrites=true&w=majority',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
