@@ -2,12 +2,21 @@ const express = require('express');
 const app = express (); 
 const morgan = require('morgan');
 const bodyParser = require ('body-parser');
-
-
+const mongoose = require('mongoose');
 
 // handels routes request
 const productRoutes=require('./api/routes/products')
 const ordersRoutes=require('./api/routes/orders')
+
+mongoose.connect(
+    'mongodb+srv://node-shop:node-shop@node-rest-shop.ckvlhxl.mongodb.net/?retryWrites=true&w=majority',
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        // useMongoClient:true
+    }
+);
+
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended:false}));
